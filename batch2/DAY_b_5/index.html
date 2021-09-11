@@ -1,0 +1,53 @@
+<html>
+
+    <head>
+        <title>Dynamically generate DOM elements</title>
+    </head>
+    <body>
+
+        <form id="f1">
+
+            Name <input type="text" name="fname"  ><br>
+            State   <select id="states" name="state">
+                        
+
+                    </select>
+
+        </form>
+
+    </body>
+
+</html>
+
+<script>              //0        1           2          3          4               5               6           7          8
+    var states = [ "Jharkhand","Bihar","West Bengal","Orisha","Uttar Pradesh","Madhya Pradesh","Karnataka","Hyderabad","Punjab"];
+
+    //parent is found here
+    var statesEle = document.getElementById("states");
+
+    //child is created here
+    var option = document.createElement("option");
+    option.value = "Bihar"; // value is set here
+    option.innerText = "Bihar"; // text is set here
+
+    //the child is appended here
+    statesEle.appendChild(option);
+
+                                            // 0 1 2 3 1 2 3 1 2 3 if(1 is false goto step 4)
+        //one time only
+        // step 0                  // step 1                           // step 3
+    for(var i=0;                 i<states.length;                     i=i+1){
+        // step 2
+        var n_option = document.createElement("option")
+        n_option.value = states[i];
+        n_option.innerHTML = states[i];
+        statesEle.appendChild(n_option);
+
+    }
+     // step 4
+
+    //var input = document.createElement("input");
+
+    //dht.appendChild(input);
+
+</script>

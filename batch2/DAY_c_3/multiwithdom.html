@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Multiplication table</title>
+</head>
+<body>
+    <input type="number" id="in_md">
+    <button onclick="gen_table()">Generate</button>
+    <div id="table_area"></div>
+</body>
+</html>
+
+<script>
+    var table_area = document.getElementById("table_area");
+    var in_md = document.getElementById("in_md");
+
+    function gen_table(){
+        var mr=1;
+        var md= parseInt(in_md.value);
+        var str = "";
+        while(mr<=10){
+            var prd = md*mr;
+            str = str + md +"X"+mr+"="+prd+"<br>";
+            mr++;
+        }
+        table_area.innerHTML = str;
+    }
+    
+
+</script>

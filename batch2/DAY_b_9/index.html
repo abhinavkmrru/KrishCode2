@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+<script>
+    // Assignment operator is = example( num1=5 )
+    var num1;        // defining variable
+    num1 = 10;       // Initialising variable
+    var num2 = 10;   // defining as well initialising variable
+
+    // Relational Operator          // example expression
+    // <                            // a<b        // 5<4(F)     // 4<5(T)
+    // >                            // a>b        // 5>4(T)     // 4>5(F)
+    // <=                           // a<=b       // 5<=5(T)    // 4<=5(T)  // 5<=4(F)
+                                    //            // 5 smaller than 5 (F)   // 5 smaller than 4 (F)
+                                    //            // 5 equals to 5 (T)      // 5 is equal to 4  (F)
+                                    //            // F + T = T              // F + F = F
+                                    // F(0) T(1)  // 0 + 1 = 1              // 0 + 0 = 0    // 1 + 1 = 1
+                                    // a is smaller than equal to b
+                                    // <,= if any condition matched then it is true
+    // >=                           // a>=b       // 5>=5(T)    // 4>=5(F)  // 5>=4(T)
+    // ==                           // a==b       // 5==5(T)    // 4==5(F)
+    // !=                           // a!=b       // 5!=5(F)    // 5!=4(T)
+    //                                // a not equal to b
+
+    // simple if else
+        num1=10;
+        if( num1>0 ){
+            document.write(num1 + " is greater than 0");
+        }else{
+            document.write(num1 + " is lesser than 0");
+        }
+    // end simple if else
+
+
+    // if else ladder
+        num1=0;
+        if(num1>0){
+            document.write("Positive");
+        }else if(num1<0) {
+            document.write("Negative");
+        }else{
+            document.write("Zero");
+        }
+    // end if else ladder
+    
+    // postive integers  1,2,3,...
+    // negative integers -1,-2,-3,...
+    // non postive integers 0,-1,-2,-3
+    // non negative integers 0,1,2,3,...
+
+    // nested if else
+        num1=0;
+
+        if(num1>0){
+
+            if(num1<100){
+                document.write("between 0 and 100")
+            }else{
+                document.write("too large")
+            }
+
+        }else{
+            document.write("Not applicable");
+        }
+    // end nested if else
+
+    
+
+    // Homework Example
+    // Comparing two numbers and finding the greatest
+    var x=5,y=8;
+    if(x>y){
+        document.write("x is greatest");
+    }else{
+        document.write("y is greatest");
+    }
+
+    //Homework Question
+    // Write a program for Comparing three numbers and find the greatest
+</script>
