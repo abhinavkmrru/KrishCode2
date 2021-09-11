@@ -1,0 +1,31 @@
+<html>
+    <head><title>Homework 2</title></head>
+    <body></body>
+</html>
+
+<script>
+    var i,j;
+    i=1
+    // loop for line
+    while(i<=5){
+
+        // underscore printing
+        j=0;
+        while(j<5-i){
+            //document.write("&nbsp;&nbsp;");
+            document.write("_");
+            j++;
+        }
+
+        // odd number of star printing
+        j=0;
+        while(j<i*2-1){
+            document.write("*");
+            j++;
+        }
+
+        // moving to next line
+        document.write("<br>");
+        i++;
+    }
+</script>
