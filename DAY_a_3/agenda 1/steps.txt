@@ -1,0 +1,4 @@
+step1 : select folder
+step2 : right click on the folder
+step3 : find send to
+step4 : Compressed zip

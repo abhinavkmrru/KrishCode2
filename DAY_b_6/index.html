@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Learning Selectors with JS</title>
+    </head>
+    <body>
+
+        Arnab
+            <input type="text" id="arnab" class="8" /> 
+            <button id="msg" onclick="showmsgarnab()"  > Show Message </button>
+            <br>
+
+        Aman
+            <input type="text" id="aman" class="8" /> 
+            <button id="msg" onclick="showmsgaman()" > Show Message </button>
+            <br>
+
+        Pragya
+            <input type="text" id="pragya" class="8" /> 
+            <button id="msg" onclick="showmsgpragya()" > Show Message </button>
+            <br>
+
+        Abhinav
+            <input type="text" id="abhinav" class="8"/> 
+            <button id="msg" onclick="showmsgabhinav()" > Show Message </button>
+            <br>
+
+        <button onclick="showmsgbyclass()">Show Msg By Class</button>
+
+    </body>
+</html>
+
+<script>
+
+    function showmsgbyclass(){
+        var eles = document.getElementsByClassName("8");
+        var msgs = "";
+        for(let i=0;i<eles.length;i++){
+            msgs = msgs + eles[i].id + " : " + eles[i].value + "\n";
+        }
+        alert(msgs);
+
+    }
+
+
+    function showmsgarnab(){
+        var ele = document.getElementById("arnab");
+        alert(ele.value);
+    }
+
+    function showmsgaman(){
+        var ele = document.getElementById("aman");
+        alert(ele.value);
+    }
+
+    function showmsgpragya(){
+        var ele = document.getElementById("pragya");
+        alert(ele.value);
+    }
+    function showmsgabhinav(){
+        var ele = document.getElementById("abhinav");
+        alert(ele.value);
+    }
+
+</script>

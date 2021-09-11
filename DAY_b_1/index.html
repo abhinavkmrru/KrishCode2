@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: wheat;">
+    <div class="container" style="background-color: white;padding: 20px;">
+        <pre>
+        1.	Type- git windows install in browser
+        2.	Download and install the Git from first Link
+        3.	Open your working directory/folder.
+            Right click and select - Git Bash Here
+        4.	check your working folder with - pwd command
+        5.	write the command on cmd-
+            git config --global user.email [Email]
+            git config --global user.name [Name]
+        6.	git init
+        7.	type - code to open VS code editor
+            create index.html, and the files you want to create
+
+        8.	git add [File Name]    (for one by one files adding)
+            git add -A		(for all the files at same time)
+
+        9.
+            git commit -m "Added index,aboutme, contact, home"
+        </pre>
+        <hr>
+        <pre>
+        10.	add the remote link
+            git remote add origin "Link get by your repository"
+
+            Settings-> Deploy Keys 
+        11.	Create SSH Key
+            $ ssh-keygen -t ed25519 -C "your_email@example.com"
+                Ignore Enter Passphrase:
+                
+
+        12.	$ eval `ssh-agent -s`
+
+        13.	$ ssh-add ~/.ssh/id_ed25519
+        14.	$ cat ~/.ssh/id_ed25519.pub
+        </pre>
+        <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#about-ssh-key-generation">Github Docs</a>
+        <pre>
+
+        15.	Copy the key and Add this in Deploy Key in settings of the gihub.
+            Add Product Key.
+            Give Title and paste the key. save it.
+
+        16.	git push origin master
+
+        17.	Reload your github page. The Files will get uploaded.
+        18. 	git log        (to check the log (the changes we did))
+
+        19.	git pull [ssh link]	(you can pull the changes made by you in github to your local computer's git file).
+
+
+
+        Some basic commands:
+
+        ls- 	list out all the files and folders of current directory
+        touch- 	to create a new file
+        cat-	to open a file
+        pwd-	to check your present working directory
+        </pre>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
