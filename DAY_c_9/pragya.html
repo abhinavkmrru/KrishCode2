@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Guess the number</title>
+        <style>
+           body{
+               background-color: lightblue;
+           }
+           .card{
+               width: 50%;
+               
+               margin: auto;
+               margin-top: 75px;
+               background-image:linear-gradient(to bottom right,blue,violet);
+               color: white;
+               padding: 50px;
+               text-align: center;
+           } 
+        </style>
+     </head>
+     <body>
+         <div class="card">
+             <h1>Guess the number</h1>
+             <h4>player 1</h4>
+             <input type="password" id="num1">
+             <button style="width: 100px;" onclick="setmemory()">Set</button>
+            <h4>player 2</h4>
+            <input type="text" id="num2">
+            <button style="width: 100px;" onclick="guessthenumber()">Guess</button>
+            <br><br>
+            <div id="msg" style="height: 100px;" ></div> 
+         </div>
+     </body>
+</html>
+<script>
+    var num1 = document.getElementById("num1");
+    var num2 = document.getElementById("num2");
+    var msg = document.getElementById("msg");
+    var memory = 0;
+
+    function setmemory(){
+        memory = parseInt(num1.value);
+        msg.innerHTML="the number has been set";
+    }
+    function guessthenumber(){
+        var num = parseInt(num2.value);
+        if(num<memory){
+            msg.innerHTML="the number guessed is smaller";
+        }
+        else if (num>memory){
+            msg.innerHTML="the number guessed is greater";
+        }
+        else {
+            msg.innerHTML="the number guessed has matched";
+        }
+    }
+</script>

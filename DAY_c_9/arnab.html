@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Guess the number Game:-</title>
+
+    <style>
+        .gamebox{
+            width: 50%; 
+            background-color: black;
+            color:white ;
+            margin:auto ;
+            margin-top: 5% ;
+            padding:50px ;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="gamebox"> 
+        <h1>
+            Guess-the-Number-Game 
+        </h1>
+        <h4>Player 1</h4>
+        <input type="password" id="Num1">
+        <button onclick="setmemory()" style="width: 130px;">
+            set the number 
+        </button>
+        <h4>Player 2</h4>
+        <input type="text" id="Num2">
+        <button onclick="guessnumber()" style="width: 130px;">
+         Guess the number 
+        </button>
+        <div id= "message"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var Num1=document.getElementById("Num1") ;
+    var Num2=document.getElementById("Num2") ;
+    var message=document.getElementById("message") ;
+    var memory=0 ;
+    function setmemory(){
+        memory= parseInt(Num1.value) ;
+        message.innerHTML="Your number is set..." ;
+
+    }
+    function guessnumber(){
+        var Num=parseInt(Num2.value);
+        if (Num<memory){
+            message.innerHTML="Your number is smaller" ;
+        }
+
+        else if(Num>memory) { 
+             message.innerHTML="Your number is greater" ; 
+            }
+
+        else {
+            message.innerHTML="you won hurray!!!...." ;
+        }
+
+    }
+</script>

@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>guess the number</title>
+    <style>
+        body {
+            background-color: chartreuse;
+        }
+
+        .gamebox {
+            background-color: cornsilk;
+            width: 50%;
+            margin: auto;
+            margin-top: 100px;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gamebox">
+        <h1>guess the number</h1>
+        <h4>player 1 </h4>
+        <input type="password" id="num1">
+        <button style="width: 80px;" onclick="setmemory()">set</button>
+        <h4>player 2 </h4>
+        <input type="text" id="num2">
+        <button style="width: 80px;" onclick="guess()">guess</button>
+        <div id="msg">
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+<script>
+    var num1 = document.getElementById("num1");
+    var num2 = document.getElementById("num2");
+    var msg = document.getElementById("msg");
+    var memory = 0;
+
+    function setmemory() {
+        memory = parseInt(num1.value);
+        msg.innerHTML = "the number is set";
+    }
+    function guess() {
+        var gvalue = parseInt(num2.value);
+        if (gvalue < memory) {
+            msg.innerHTML = "<b style='color:red;'>smaller</b>"; 
+            alert("smaller");
+        } 
+        else if(gvalue>memory) {
+            msg.innerHTML = "<b style='color:red;'>greater</b>"; 
+            alert("greater");
+        } 
+        else{
+            msg.innerHTML = "<b style='color:green;'>matched</b>";  
+            alert("matched"); 
+        }
+    }
+</script>

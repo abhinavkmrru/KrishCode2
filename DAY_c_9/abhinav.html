@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <style>
+        body{
+            background-color: lightpink;
+        }
+        .card{
+            height: 75%;
+            width: 50%;
+            padding: 50px;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            background-image: linear-gradient(to bottom right, lightgreen, lightskyblue);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <H1>Guess the Number</H1>
+        <h4>Player 1</h4>
+        <input type="password" id="ognum" />
+        <button style="width: 100px;" onclick="setnum()">Set</button>
+        <h4>Player 2</h4>
+        <input type="text" id="gunum"/>
+        <button style="width: 100px;" onclick="guessnum()">Guess</button>
+        <br>
+        <div id="msg" style="height: 20px;">
+            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var ognum = 0;
+    var ognumin = document.getElementById("ognum");
+    var gunum=0;
+    var attempt=0;
+    var gunumin = document.getElementById("gunum");
+    var msg = document.getElementById("msg");
+    function setnum(){
+        ognum = parseInt(ognumin.value);
+        attempt=0;
+        msg.style.color = "green";
+        msg.innerHTML = "Number is set";
+    }
+    function guessnum(){
+        attempt = attempt + 1;
+        gunum = parseInt(gunumin.value);
+        if(gunum<ognum){
+            msg.style.color = "red";
+            msg.innerHTML = gunum+ " is Smaller<br> Attempt: "+attempt;
+        }else if(gunum>ognum){
+            msg.style.color = "red";
+            msg.innerHTML = gunum+" is Greater<br> Attempt: "+attempt;
+        }else{
+            msg.style.color = "green";
+            msg.innerHTML = gunum+" Matched<br> Attempt: "+attempt+"<br>You Won";
+        }
+        gunumin.value = "";
+    }
+
+
+    ognumin.addEventListener("keyup",function(e){
+        var reg = /^\d+$/
+        while(!reg.test(ognumin.value) && ognumin.value!=""){
+            var keyval = ognumin.value[ognumin.value.length-1]
+            ognumin.value = ognumin.value.slice(0, -1); 
+            msg.style.color = "red";
+            msg.innerHTML = keyval+" is not a number";
+        }
+        
+        if(e.keyCode == 13){
+            setnum()
+        }
+    })
+
+    gunumin.addEventListener("keypress",function(e){
+        if(e.keyCode == 13){
+            guessnum()
+        }
+    })
+</script>
