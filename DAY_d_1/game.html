@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>SetTimeOut</title>
+    </head>
+    <body>
+        <h1>ZapTable</h1>
+        <h3>5 X 6 = </h3>
+        <input type="number" id="ans">
+        <button onclick="check()">Check</button>
+    </body>
+</html>
+<script>
+    
+                //fp    //sp
+    var obj = setTimeout( mymsg , 10000 );
+
+    function mymsg(){
+        alert("Time OUT !! You Lost");
+    }
+
+    function check(){
+        var ans = document.getElementById("ans");
+        var num = parseInt(ans.value);
+        if(num==30){
+            // clears the set time out 
+            clearTimeout(obj);
+
+            alert("Correct");
+
+        }
+    }
+
+</script>
