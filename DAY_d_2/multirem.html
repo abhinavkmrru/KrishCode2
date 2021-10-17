@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SetInterval 2nd Example</title>
+</head>
+<body>
+    <input type="number" id="multiplicant" >
+    <button onclick="setm()">START </button>
+
+    <h1 id="scoretxt"></h1>
+</body>
+</html>
+
+<script>
+    var multiplicant = document.getElementById("multiplicant");
+    var scoretxt = document.getElementById("scoretxt");
+    var memory = 0;
+    var multiplier = 0;
+    var obj;
+
+    function setm(){
+        memory = parseInt(multiplicant.value);
+        multiplier=0;
+        obj = setInterval( showMulti, 1000); // 1sec = 1000 milisec
+    }
+
+    function showMulti(){
+        multiplier = multiplier + 1;
+        scoretxt.innerHTML = memory + " X "+ multiplier + " = "+(memory*multiplier);
+        if(multiplier==10){
+
+            clearInterval(obj);
+        }
+    }
+
+</script>
