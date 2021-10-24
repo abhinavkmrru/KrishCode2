@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock 12</title>
+    <style>
+        body{
+            background-color: black;
+            color: aquamarine;
+        }
+        .clock{
+            position: absolute;
+            color: aquamarine;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-weight: bolder;
+            font-size: xx-large;
+        }
+        /* .dimg{
+            transform: scale(.1);
+        } */
+    </style>
+</head>
+<body>
+    <div id="clock" class="clock">12:00:00</div>
+    <!-- <img class="dimg" height="500px" width="500px" src="./dance.jpg"/> -->
+    <!-- <b>Aman</b><br>Aman -->
+</body>
+</html>
+<script>
+    var clock = document.getElementById("clock");
+    function displayTime(){
+        var mydate = new Date(); // assume New Date as a function which will give today's date and time
+        var hh = mydate.getHours(); // it will give hour in number format
+        var mm = mydate.getMinutes(); // it will give minutes in number format
+        var ss = mydate.getSeconds(); // it will give seconds in number format
+        var ampm = "am";
+        
+        if(hh>12){
+            hh = hh - 12;
+            ampm = "pm";
+        }
+        if(hh<10){
+            hh = "0"+hh;
+        }
+        if(mm<10){
+            mm = "0"+mm;
+        }
+        if(ss<10){
+            ss = "0"+ss;
+        }
+
+        var str_time = hh + " : "+ mm +" : "+ ss + " "+ampm; // it will formatted like below line
+                    // "19 : 44 : 55"
+        clock.innerHTML = str_time; // putting text/string inside the clock div tag
+    }
+    displayTime();
+    setInterval(displayTime, 1000);
+
+</script>
