@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predefined Functions of Array</title>
+</head>
+<body>
+    <h1>Please Check Console by pressing F12 (Function Key 12)</h1>
+</body>
+</html>
+
+<script>
+
+var numbers = [05,15,02,30,28,31,32];
+console.log('%c Orginal Array', 'background: #222; color: #bada55');
+console.log(numbers);
+
+
+// 0) length --- length is property which store the total number of elements inside the array
+
+console.log('%c Length', 'background: #222; color: #bada55');
+console.log(numbers.length);
+
+// 1) sort --- sort will sort the elements in lexical way or like dictionary
+
+console.log('%c sort', 'background: #222; color: #bada55');
+numbers.sort();
+console.log(numbers);
+// abba
+// able
+// 10000
+// 2
+
+// extra
+// console.log( numbers.sort(function(a,b){
+//     return a-b;
+// }));
+
+// 2) push --- adding element at the end position of array
+
+console.log('%c push', 'background: #222; color: #bada55');
+numbers.push(96);
+console.log(numbers);
+
+// 3) pop --- removes the element at the end position of array and also it returns the removed element
+
+console.log('%c pop', 'background: #222; color: #bada55');
+var removedElementEnd = numbers.pop();
+console.log("removedElementEnd "+ removedElementEnd);
+console.log(numbers);
+
+// 4) unshift --- adding element at the start position of array
+console.log('%c unshift', 'background: #222; color: #bada55');
+numbers.unshift(-99);
+console.log(numbers);
+
+// 5) shift --- removes the element at the start position of array and also it returns the removed element
+
+console.log('%c shift', 'background: #222; color: #bada55');
+var removedElementStart = numbers.shift();
+console.log("removedElementStart "+ removedElementStart);
+console.log(numbers);
+
+// Iterate array without using predefined function
+// Using for loop and index of the array
+
+console.log('%c Iterate array using for loop and index of the array', 'background: #222; color: #bada55');
+for(var i=0;i<numbers.length;i++){
+    console.log(numbers[i]);
+}
+
+// 6) forEach --- Iterate array using predefined function
+console.log('%c forEach', 'background: #222; color: #bada55');
+numbers.forEach(function(value,index){
+    console.log("index :"+index);
+    console.log("value :"+value);
+});
+
+// lambda 
+// console.log("using lambda function");
+// numbers.forEach((value,index) => {
+//     console.log("index :"+index);
+//     console.log("value :"+value);
+// });
+
+// 7) splice --- it will remove the elements from the given position
+// first parameter sets the position 
+// second parameter sets number of elements to delete from the set position
+console.log('%c splice', 'background: #222; color: #bada55');
+var pos = 1;
+var numberOfElements = 2
+numbers.splice(pos,numberOfElements);
+console.log(numbers);
+
+//homework practice and experiment
+
+</script>
+
+
