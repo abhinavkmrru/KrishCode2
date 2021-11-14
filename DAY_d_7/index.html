@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+</head>
+<body>
+    <h1>Please Check Console by pressing F12 (Function Key 12)</h1>
+</body>
+</html>
+<script>
+
+    // our includes function defination
+    function linearSearch(arr, key){
+        for(var i=0;i<arr.length;i++){ // iterating each element of the array
+            if(arr[i] == key){         // matching each element
+                return true;           // if matched then return true
+            }
+        }
+                                        // after comparing each and every element of the array and key is not matched
+        return false;                   // we are returning false
+    }
+
+                    // 0        1       2         3
+    var students = ["Pragya","Aman","Arnab","Abhinav"];
+
+    // our includes function calling
+    console.log("our linearSearch/includes function")
+    console.log("AbhinavK");
+    console.log(linearSearch(students,"AbhinavK"));
+    console.log("Abhinav");
+    console.log(linearSearch(students,"Abhinav"));
+
+
+    // predifined function includes
+    console.log("predefined includes function");
+    console.log("AbhinavK");
+    console.log(students.includes("AbhinavK"));
+    console.log("Abhinav");
+    console.log(students.includes("Abhinav"));
+
+    // Found not found algorithm
+    if(students.includes("AbhinavK")){
+        console.log("found")
+    }else{
+        console.log("not found")
+    }
+    
+
+</script>
