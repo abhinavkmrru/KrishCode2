@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object</title>
+</head>
+<body>
+    <h1>Please Check Console by pressing F12 (Function Key 12)</h1>
+</body>
+</html>
+
+<script>
+    var a = 56;
+    var arr = [];
+    // we tell the browser/interpretter a variable is object by {}
+    var arnab = {
+       //key: value
+        fname: "Arnab",
+        mname: "",
+        lname: "Bhuniya",
+        class: "8",
+        // we can also store array as value
+        fruits: ["Banana","Watermelon"],
+        car: {
+            brand: "Maruti Suzuki",
+            model: "Alto",
+            topspeed: 280,
+            mileage: 23,
+            fueltype: "petrol"
+        },
+        // we can also store function as value
+        fullname: function(){
+            // with the help of "this" keyword we can access property of its own.
+            return this.fname+" "+this.mname+" "+this.lname;
+        },
+        // we can also pass argumnet in the function
+        petroltofill: function(distance){
+            return distance/this.car.mileage;
+        }
+    };
+    // Object is a container which can store multiple values as (key,value) pair
+
+    console.log("name")
+    console.log(arnab.fname);
+    console.log("fruits")
+    console.log(arnab.fruits);
+    console.log("car");
+    console.log(arnab.car);
+    console.log("car topspeed");
+    console.log(arnab.car.topspeed);
+    console.log("Full Name");
+    console.log(arnab.fullname());
+    console.log("Petrol to fill");
+    console.log(arnab.petroltofill(220));
+
+
+    // Array of Objects
+    var Task1 = {
+        taskname: "Buy Chandan",
+        description: "50gm solid",
+        assigned_date_time: Date.now(),
+        end_time: Date.now()+60000*60*5,
+        complition_time: null,
+    };
+    var Task2 = {
+        taskname: "Clean Room",
+        description: "Remove all the bed sheets, curtains, swipe floor",
+        assigned_date_time: Date.now(),
+        end_time: Date.now()+60000*60*2,
+        complition_time: null
+    };
+
+    var tasks = [Task1,Task2];
+    console.log(tasks);
+    console.log(tasks[0].taskname);
+
+    // set complition time
+    tasks[0].complition_time = 1637996264;
+
+    // H.W. number 1 
+    // create 5 task object 
+    var Task3 = {
+        taskname: "Buy Onion and Potato",
+        description: "Specific Shop",
+        assigned_date_time: 1638010800,
+        end_time: 1638010800+60000*30,
+        complition_time: 1638010800+60000*20,
+        // H.W. number 2
+        completed_within_timeslot: function(){
+            //return true or false
+        }
+    }
+</script>
