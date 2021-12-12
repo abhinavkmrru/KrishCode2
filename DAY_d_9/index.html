@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object</title>
+</head>
+<body>
+    <h1>Please Check Console by pressing F12 (Function Key 12)</h1>
+    <div id="tasklistdiv"></div>
+</body>
+</html>
+
+<script>
+    var tasklistdiv = document.getElementById("tasklistdiv");
+    // H.W. number 1 
+    // create 5 task object 
+    var Task3 = {
+        taskname: "Buy Onion and Potato",
+        description: "Specific Shop",
+        assigned_date_time: 1638010800,
+        end_time: 1638010800+60000*30,
+        complition_time: 1638010800+60000*20,
+        // H.W. number 2
+        completed_within_timeslot: function(){
+            //return true or false
+        }
+    }
+
+    // H.W.
+
+    var HWTask1 = {
+        taskname: "Get Blood Report",
+        description: "Go to the pathlab show recipt and get Blood Report",
+        assigned_date_time: 1637985600,
+        end_time: 1638104400,
+        complition_time: 1638097200,
+        completed_within_timeslot: function(){
+            if(this.complition_time<this.end_time){
+                return true;
+            }else{
+                return false;
+            }
+        },
+        toHTML: function(){
+            var i=10;
+            if(this.completed_within_timeslot()){
+                var msg = "completed";
+            }else{
+                var msg = "not completed";
+            }
+            var div = document.createElement("div");
+            var htmlCodeStr = `<div>
+                    <h3>${this.taskname}</h3>
+                    <p>${this.description}</p>
+                    <p>${msg}</p>
+                </div>`;
+            div.innerHTML = htmlCodeStr;
+            return div;
+        }
+    }
+
+    var HWTask2 = {
+        taskname: "Send Meeting Link in WP",
+        description: "Send Meeting link in WP for KrishCode.",
+        assigned_date_time: 1638025200,
+        end_time: 1638104400,
+        complition_time: 1638105300,
+        completed_within_timeslot: function(){
+            if(this.complition_time<this.end_time){
+                return true;
+            }else{
+                return false;
+            }
+        },
+        toHTML: function(){
+            var i=10;
+            if(this.completed_within_timeslot()){
+                var msg = "completed";
+            }else{
+                var msg = "not completed";
+            }
+            var div = document.createElement("div");
+            var htmlCodeStr = `<div>
+                    <h3>${this.taskname}</h3>
+                    <p>${this.description}</p>
+                    <p>${msg}</p>
+                </div>`;
+            div.innerHTML = htmlCodeStr;
+            return div;
+        }
+    }
+
+    var HWArr = [HWTask1,HWTask2];
+
+    console.log(HWArr);
+
+    for(let i=0;i<HWArr.length;i++){
+        if(HWArr[i].completed_within_timeslot()){
+            console.log(HWArr[i].taskname +" is completed within timeslot.");
+        }else{
+            console.log(HWArr[i].taskname +" is not completed in the given timeslot.");
+        }    
+    }
+
+    for(let i=0;i<HWArr.length;i++){
+        tasklistdiv.append(HWArr[i].toHTML());
+        var hr = document.createElement("HR");
+        tasklistdiv.append(hr);
+    }
+
+    // if(HWArr[0].completed_within_timeslot()){
+    //     console.log(HWArr[0].taskname +" is completed within timeslot.");
+    // }else{
+    //     console.log(HWArr[0].taskname +" is not completed in the given timeslot.");
+    // }
+
+    // if(HWArr[1].completed_within_timeslot()){
+    //     console.log(HWArr[1].taskname +" is completed within timeslot.");
+    // }else{
+    //     console.log(HWArr[1].taskname +" is not completed in the given timeslot.");
+    // }
+    
+
+</script>

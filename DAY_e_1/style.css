@@ -1,0 +1,84 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    background-color: #127493;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+.vertical_nav{
+    background-color: #0FA0CE;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+}
+.vertical_nav a{
+    display: block;
+    text-decoration: none;
+    padding: 8px 16px 8px 16px;
+    color: white;
+    font-weight: bold;
+}
+.vertical_nav a:hover{
+    background-color: #4CBFE3;
+}
+
+/* Sub Body Design */
+
+.task_body{
+    margin-left: 20vw;
+}
+.sub_nav{
+    background-color: #0FA0CE;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+.sub_vertical_nav{
+    background-color: #4CBFE3;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+}
+.sub_vertical_nav a{
+    display: block;
+    text-decoration: none;
+    padding: 8px 16px 8px 16px;
+    color: white;
+    font-weight: bold;
+}
+.sub_vertical_nav a:hover{
+    background-color: #6ed1f0;
+}
+
+/* Button Design */
+
+.green_btn{
+    padding: 8px;
+    background-color: #2B9750;
+    color: white;
+    border-radius: 5px;
+}
+.green_btn:hover{
+    background-color: #57C57C;
+}
+
+.red_btn{
+    padding: 8px;
+    background-color: #C84A4A;
+    color: white;
+    border-radius: 5px;
+}
+.red_btn:hover{
+    background-color: #E97E7E;
+}
