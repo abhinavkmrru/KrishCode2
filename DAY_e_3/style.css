@@ -163,3 +163,8 @@ body{
     margin-top: 2px;
     margin-bottom: 10px;
 }
+
+
+.display_none{
+    display: none;
+}
