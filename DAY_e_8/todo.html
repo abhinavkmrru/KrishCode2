@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="nav">ToDo App <button class="white_btn" onclick="addTaskDialog()">Add Task</button></div>
+    <ul class="vertical_nav" id="tasklist_dom">
+        
+    </ul>
+    <div class="task_body">
+        <div class="sub_nav"><span id="navheader_dom">Task 1</span> <button class="white_btn" onclick="addSubTaskDialog()">Add Sub Task</button></div>
+        <ul class="sub_vertical_nav" id="subtasklist_dom">
+            
+        </ul>
+        <div class="task_body display_none" style="padding: 20px;" id="content_dom">
+            <h3 id="taskheader_dom">Sub Task 1</h3>
+            <h4>Description</h4>
+            <p id="taskdescription_dom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aliquam exercitationem ad distinctio at repudiandae dolore sint, voluptate, adipisci minima corporis ex sit nobis magnam dicta, ipsa optio ipsam quam?</p>
+
+            <button class="green_btn" id="btn_complete">Comlete</button>
+            <button class="green_btn" id="btn_edit">Edit</button>
+            <button class="red_btn" id="btn_delete">Delete</button>
+
+        </div>
+    </div>
+    
+    <div class="dialog_container display_none" id="dialog_container">
+
+        <!-- <div class="dialog">
+            <div class="header_container">
+                <h2 class="dialog_header">Header</h2>
+                <button class="dialog_close_btn" onclick="closedialogbox()">X</button>
+            </div>
+            <hr>
+
+            <div class="body_container">
+                <label class="dialog_label">Enter Task Name</label>
+                <input type="text" class="dialog_input">
+                <label class="dialog_label">Description</label>
+                <textarea rows="6" class="dialog_textarea"></textarea>
+            </div>
+            
+            <div class="footer_container">
+                <hr>
+                <button class="green_btn">Save</button>
+            </div>
+        </div> -->
+
+    </div>
+
+
+
+    <script src="elements.js" ></script>
+    <script src="script.js" ></script>
+</body>
+</html>
